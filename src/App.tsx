@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { marked } from 'marked';
+
 
 const defaultMarkdown = `
 # Welcome to my React Markdown Previewer!
