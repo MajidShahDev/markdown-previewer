@@ -45,11 +45,6 @@ And here. | Okay. | I think we get it.
 ![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg)
 `;
 
-declare global {
-  interface Window {
-    marked: any;
-  }
-}
 
 const App = () => {
   const [markdownText, setMarkdownText] = useState<string>(defaultMarkdown);
@@ -76,7 +71,7 @@ const App = () => {
             id="preview"
             className="preview-container"
             dangerouslySetInnerHTML={{
-              __html: window.marked(markdownText, { breaks: true }),
+              __html: marked(markdownText, { breaks: true }),
               // { breaks: true } Converts line breaks (\n) in paragraphs into <br> tags (like in a text editor).
             }}
           />
